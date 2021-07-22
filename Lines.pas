@@ -8,9 +8,8 @@ const
   COLOR_COUNT=6;
   NEW_BALLS=3;
   BT_RADIUS=35;
-  LAST_RECORD=50;
 var 
-  n,i,selected,score,b_lb,b_rb,b_p,b_bk,d_b1,d_b2,steps,isgame,points,dialogType,BAR_WIDTH,BAR_TOP,ITEM_SIZE,BALL_SIZE: integer;
+  n,i,selected,score,b_lb,b_rb,b_p,b_bk,d_b1,d_b2,steps,isgame,points,dialogType,BAR_WIDTH,BAR_TOP,ITEM_SIZE,BALL_SIZE, LAST_RECORD: integer;
   pop,song,boom,torecord: system.Media.SoundPlayer;
   starts:array[1..4] of string=('Start-Poslala.wav','Start-Engine.wav','Start-Gong.wav','Start-Oracle.wav');
   ends:array[1..6] of string=('Ow-Cuckoo.wav','Ow-No.wav','Ow-Noo.wav','Ow-Uh-oh.wav','Ow-Male-04.wav','Ow-Car.wav');
@@ -175,7 +174,7 @@ begin
     FillEllipse(bar_width div 2-BT_RADIUS+d,BAR_TOP+190,bar_width div 2+BT_RADIUS+d,BAR_TOP+190+2*BT_RADIUS);
     FillRect(bar_width div 2-d,BAR_TOP+190,bar_width div 2+d,BAR_TOP+190+2*BT_RADIUS);
     TextOut(bar_width div 2-round(1.5*d)-8,BAR_TOP+190+BT_RADIUS-15,steps);
-    if score<7 then begin
+    if score/last_record<0.25 then begin
   // Простая отрисовка очков
       DrawButton(bar_width-bar_width div 5,BAR_TOP+190+BT_RADIUS,BT_RADIUS,0,rgb(57, 206, 70));
       SetPenColor(clBlack);
@@ -378,6 +377,8 @@ begin
   DrawInfoRect(x+180,y+73,d,12,score.ToString,clBlack,clWhite);
   song.SoundLocation:='sounds/'+ends[random(1,6)];
   song.Play;
+  if score > last_record 
+    then last_record:= score;
   CreateDialog('Окончание игры','Все поля игры заняты!','Новая игра','Спасибо, я пошёл',3);
 end;
 procedure CreateBalls();
@@ -636,6 +637,8 @@ begin
   Window.Width:=WIDTH;
   Window.Height:=HEIGHT;
   ltcr:=230; dkcr:=220;
+// Установка рекорда
+  LAST_RECORD:=30;
 // Звуковое оформление
   pop:=new system.Media.SoundPlayer;
   pop.SoundLocation:='sounds/pop.WAV';
