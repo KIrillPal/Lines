@@ -18,7 +18,7 @@
 ![fewcorrect](https://github.com/KIrillPal/Lines/blob/main/images/fewcorrect.png)
 ### 3. Талант [67%, 100%)
 ![oncorrect](https://github.com/KIrillPal/Lines/blob/main/images/oncorrect.png)
-### 4. Отличник (>100%)
+### 4. Отличник (>=100%)
 ![allcorrect](https://github.com/KIrillPal/Lines/blob/main/images/allcorrect.png)
 
 Звания ни на что не влияют, но приятно пробовать разные варианты и сразиться сам с собой.
