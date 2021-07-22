@@ -13,13 +13,13 @@
 По достижении игроком 20% от прошлого рекорда появляется сравнение очков с предыдущим рекордом.
 Чем меньше поле, тем сложнее игра. По её окончании появляется окно с результатом игрока. Там отображается процент, на который побит рекорд, или процент от рекорда. В зависимости от этого процента можно получить одно из званий:
 ### 1. Игрок [0%, 33%)
-[nocorrect](https://github.com/KIrillPal/Lines/blob/main/images/nocorrect.png)
+![nocorrect](https://github.com/KIrillPal/Lines/blob/main/images/nocorrect.png)
 ### 2. Студент [33%, 67%)
-[fewcorrect](https://github.com/KIrillPal/Lines/blob/main/images/fewcorrect.png)
+![fewcorrect](https://github.com/KIrillPal/Lines/blob/main/images/fewcorrect.png)
 ### 3. Талант [67%, 100%)
-[oncorrect](https://github.com/KIrillPal/Lines/blob/main/images/oncorrect.png)
+![oncorrect](https://github.com/KIrillPal/Lines/blob/main/images/oncorrect.png)
 ### 4. Отличник (>100%)
-[allcorrect](https://github.com/KIrillPal/Lines/blob/main/images/allcorrect.png)
+![allcorrect](https://github.com/KIrillPal/Lines/blob/main/images/allcorrect.png)
 
 Звания ни на что не влияют, но приятно пробовать разные варианты и сразиться сам с собой.
 # Структура проекта.
